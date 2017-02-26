@@ -1,0 +1,12 @@
+@import '../assets/build.scss';
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 90%;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}

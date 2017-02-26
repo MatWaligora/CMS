@@ -1,0 +1,16 @@
+@import '../../assets/build.scss';
+
+.app-footer {
+  min-height: $footer-height;
+  @include back-and-text;
+  @include border-top;
+  margin-top: 50px;
+}
+
+.tag {
+  @include tag;
+}
+
+.container {
+  margin-top: 30px;
+}

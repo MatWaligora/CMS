@@ -1,0 +1,40 @@
+@import '../../assets/build.scss';
+
+.navbar {
+  border-radius: 0;
+  @include back-and-text;
+  @include border-bottom();
+}
+
+.navbar-brand, .navbar-toggler.navbar-light {
+  font-weight: bold;
+  color: $cl-text !important;
+}
+
+.navbar-nav {
+  float:right;
+}
+
+.nav-item {
+  .nav-link {
+    font-weight: bold;
+    color: $cl-text;
+    font-size: 1.15rem;
+    &:active {
+      @include hover;
+    }
+    &:visited {
+      color: $cl-text;
+    }
+    &:hover {
+      @include hover;
+    }
+    &.active {
+      color: $cl-primary;
+    }
+  }
+}
+
+.nav-item.dropdown {
+  cursor: pointer;
+}

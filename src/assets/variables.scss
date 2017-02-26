@@ -1,0 +1,10 @@
+$border-height: 4px;
+$footer-height: 150px;
+
+@mixin border-top () {
+  border-top: $border-height solid $cl-primary;
+}
+
+@mixin border-bottom () {
+  border-bottom: $border-height solid $cl-primary;
+}

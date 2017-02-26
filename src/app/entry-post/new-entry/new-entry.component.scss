@@ -1,0 +1,29 @@
+@import '../../../assets/build.scss';
+
+.btn-submit {
+  margin-top: 15px;
+}
+
+.tag {
+  @include tag;
+  border-color: $cl-primary;
+  color: $cl-primary;
+  margin-right: 3px;
+  margin-left: 3px;
+
+  &:hover {
+    .remove-tag-button {
+      display: inline-block;
+    }
+  }
+}
+
+.remove-tag-button {
+  cursor: pointer;
+
+  display: none;
+}
+
+.form-textarea {
+  height: 300px;
+}

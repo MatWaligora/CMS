@@ -1,0 +1,11 @@
+<div class="container">
+    <div>
+        <h1>Sign in</h1>
+        <form [formGroup]="form">
+            <input formControlName="email" placeholder="Email" type="email">
+            <input formControlName="password" placeholder="Password" type="password">
+            <button (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="col-12">
+        <h2>Create new entry</h2>
+        <form [formGroup]="entryForm">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control" formControlName="title">
+            <label for="tag">Tags:</label>
+            <span class="tag" *ngFor="let tag of entryForm.controls['tags'].controls; let i = index">
+                {{tag._value}} <span (click)="removeTag(i)" class="remove-tag-button">x</span>
+            </span>
+            <input type="text" id="tag" name="tag" class="form-control" formControlName="tag">
+            <button class="btn btn-success btn-sm" (click)="addNewTag()" (keydown.return)="addNewTag()">Add new tag</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="col-12">
+        <ckeditor
+                [(ngModel)]="ckeditorContent">
+            <ckbutton [name]="'saveButton'"
+                      [command]="'saveCmd'"
+                      (click)="save($event)"
+                      [icon]="'save.png'"
+                      [label]="'Save Document'"
+                      [toolbar]="'clipboard,1'">
+            </ckbutton>
+        </ckeditor>
+        <button type="button" class="btn btn-success btn-submit" (click)="onSubmit(ckeditorContent)">Submit</button>
+
+        <div [innerHTML]="ckeditorContent"></div>
+    </div>
+</div>

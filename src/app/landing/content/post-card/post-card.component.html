@@ -1,0 +1,11 @@
+<div class="card" [ngStyle]="{'background': 'url(../../../../assets/stalowa-abstrakcja.jpg)'}" (click)="openPost(post.$key)">
+  <div class="card-img-overlay">
+    <p class="card-title">{{post.title}}</p>
+    <div class="card-text" >{{post?.content | textLimiter}}</div>
+    <div class="card-footer">
+      <ul>
+        <li *ngFor="let tag of post.tags"><span class="tag"><a href="">{{tag}}</a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="col-12">
+    <h1>{{post?.title}}</h1>
+    <div [innerHTML]="post?.content" ></div>
+    <div>
+      Tags:
+      <ul>
+        <li *ngFor="let tag of post?.tags"><span class="tag"><a href="">{{tag}}</a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>

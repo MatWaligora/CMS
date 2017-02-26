@@ -1,0 +1,15 @@
+@import '../../../assets/build.scss';
+
+ul {
+  padding-left: 0px;
+  li {
+    display: inline-block;
+  }
+}
+.tag{
+  @include tag;
+  border-color: #6f6f6f;
+  a {
+    color: #6f6f6f;
+  }
+}

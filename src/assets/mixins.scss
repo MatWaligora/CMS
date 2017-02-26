@@ -1,0 +1,39 @@
+@mixin border-top () {
+  border-top: $border-height solid $cl-primary;
+}
+
+@mixin border-bottom () {
+  border-bottom: $border-height solid $cl-primary;
+}
+
+@mixin back-and-text() {
+  background-color: $cl-secondary;
+  color: $cl-text;
+}
+
+@mixin hover() {
+  color: $cl-primary;
+}
+
+@mixin tag() {
+  border: solid 2px $cl-accent;
+  font-weight: 200;
+  font-size: 0.8rem;
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 3px;
+  font-weight: bold;
+  a {
+    color: $cl-accent;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    border: solid 2px $cl-primary;
+    a {
+      @include hover;
+    }
+  }
+}
+
