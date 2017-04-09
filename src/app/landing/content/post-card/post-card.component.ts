@@ -18,4 +18,8 @@ export class PostCardComponent implements OnInit {
     console.log('/post', key);
     this.router.navigate(['/post', key])
   }
+
+  limitText() {
+    return this.post.content.slice(0, 100) + '...';
+  }
 }

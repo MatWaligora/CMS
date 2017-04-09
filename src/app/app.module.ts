@@ -13,12 +13,12 @@ import { HeaderComponent } from './landing/header/header.component';
 import {LandingModule} from "./landing/landing.module";
 import {AboutModule} from "./about/about.module";
 import {EntryPostModule} from "./entry-post/entry-post.module";
-import {PostsService} from "./posts.service";
 import { LoginComponent } from './authentication/login/login.component';
 import {LoginRoutingModule} from "./authentication/login-routing.module";
 import {AuthService} from "./authentication/auth.service";
 import {AuthGuard} from "./authentication/auth-guard.service";
 import {PreventGuard} from "./authentication/prevent-guard.service";
+import {EntryPostService} from "./entry-post/entry-post.service";
 
 
 @NgModule({
@@ -42,7 +42,7 @@ import {PreventGuard} from "./authentication/prevent-guard.service";
     appRouting,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [PostsService, AuthService, AuthGuard, PreventGuard],
+  providers: [EntryPostService, AuthService, AuthGuard, PreventGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

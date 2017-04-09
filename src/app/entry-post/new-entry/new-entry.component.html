@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="col-12">
+    <div class="col-12 form-container">
         <h2>Create new entry</h2>
         <form [formGroup]="entryForm">
             <label for="title">Title</label>
@@ -12,11 +12,8 @@
             <button class="btn btn-success btn-sm" (click)="addNewTag()" (keydown.return)="addNewTag()">Add new tag</button>
         </form>
     </div>
-</div>
 
-
-<div class="container">
-    <div class="col-12">
+    <div class="col-12 editor-container">
         <ckeditor
                 [(ngModel)]="ckeditorContent">
             <ckbutton [name]="'saveButton'"

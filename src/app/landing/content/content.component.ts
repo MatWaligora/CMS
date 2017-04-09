@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PostsService} from "../../posts.service";
 import {Entry} from "../../entry-post/entry";
+import {EntryPostService} from "../../entry-post/entry-post.service";
 
 @Component({
   selector: 'app-content',
@@ -10,14 +10,10 @@ import {Entry} from "../../entry-post/entry";
 export class ContentComponent implements OnInit {
   posts: Entry[];
 
-  constructor(private postService: PostsService) { }
+  constructor(private postService: EntryPostService) { }
 
   ngOnInit() {
-    this.postService.getAllPosts()
-        .subscribe(posts => {
-          console.log(posts);
-          this.posts = posts
-        });
+    this.postService.posts.subscribe(posts => this.posts = posts);
   }
 
 }
